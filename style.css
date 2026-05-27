@@ -232,3 +232,52 @@ h1 { font-size: clamp(1.85rem, 4.1vw, 3.2rem); line-height: 1.2; margin: .65rem 
   line-height: 1.7;
   font-size: 15px;
 }
+
+/* ===== FIX POSISI TOMBOL DETAIL PRODUK ===== */
+/* Membuat semua card produk punya susunan sama */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+}
+
+/* Area gambar dibuat tetap sama */
+.product-card .product-image {
+  height: 160px;
+  flex-shrink: 0;
+}
+
+/* Area judul dibuat sama tinggi supaya tombol tidak naik turun */
+.product-card h3 {
+  min-height: 52px;
+  line-height: 1.35;
+  margin: 0 0 .75rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Area harga tetap rapi */
+.product-card .price {
+  margin: 0 0 .7rem;
+}
+
+/* Area deskripsi dibuat sama tinggi */
+.product-card .desc {
+  min-height: 58px;
+  margin: 0 0 1rem;
+}
+
+/* Tombol dikunci ke bawah card */
+.product-card .btn {
+  margin-top: auto;
+  width: 130px;
+  height: 42px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: center;
+}
