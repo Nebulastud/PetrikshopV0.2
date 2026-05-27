@@ -169,3 +169,28 @@ h1 { font-size: clamp(1.85rem, 4.1vw, 3.2rem); line-height: 1.2; margin: .65rem 
   .brand-description { font-size: .94rem; line-height: 1.65; }
   .navbar-logo { width: clamp(74px, 20vw, 95px); }
 }
+.product-tools {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.search-box,
+.filter-box {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(20,20,30,0.8);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  min-width: 220px;
+}
+
+.search-box:focus,
+.filter-box:focus {
+  border-color: #f5c96a;
+  box-shadow: 0 0 15px rgba(245,201,106,0.4);
+}
