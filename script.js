@@ -50,3 +50,29 @@ window.addEventListener("load", () => {
   setActiveMenu();
   handleNavbarScroll();
 });
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const products = document.querySelectorAll(".product-card");
+
+function filterProducts() {
+  const searchValue = searchInput.value.toLowerCase();
+  const categoryValue = categoryFilter.value;
+
+  products.forEach((product) => {
+    const title = product.querySelector("h3").textContent.toLowerCase();
+    const category = product.dataset.category;
+
+    const matchSearch = title.includes(searchValue);
+    const matchCategory =
+      categoryValue === "all" || category === categoryValue;
+
+    if (matchSearch && matchCategory) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+searchInput.addEventListener("input", filterProducts);
+categoryFilter.addEventListener("change", filterProducts);
