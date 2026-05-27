@@ -292,3 +292,97 @@ h1 { font-size: clamp(1.85rem, 4.1vw, 3.2rem); line-height: 1.2; margin: .65rem 
   border-radius: 12px;
   display: block;
 }
+/* ===== FIX TAMPILAN MOBILE + VIDEO/LOGO RESPONSIVE ===== */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* Video / logo besar di halaman home */
+.hero-page video,
+.hero-page img,
+.logo-wrapper video,
+.logo-wrapper img,
+.hero-logo-video {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
+/* Biar card/video produk rapi */
+.product-image {
+  overflow: hidden;
+}
+
+.product-image img,
+.product-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Khusus HP */
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .hero-page {
+    min-height: auto;
+    padding: 1.5rem 0 2.2rem;
+  }
+
+  .hero-page video,
+  .hero-page img,
+  .logo-wrapper video,
+  .logo-wrapper img,
+  .hero-logo-video {
+    max-width: 280px !important;
+  }
+
+  .banner-card {
+    transform: none !important;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-content,
+  .hero-branding {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brand-description,
+  .hero-content p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-actions .btn {
+    font-size: 0.75rem;
+    padding: 0.72rem 0.9rem;
+  }
+    }
