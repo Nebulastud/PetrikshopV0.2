@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "petrikshopv2",
-  "compatibility_date": "2026-05-27",
+  "compatibility_date": "2026-05-29",
   "observability": {
     "enabled": true
   },
